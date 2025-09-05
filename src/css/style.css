@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6ff;
+  padding: 60px;
+}
+
+input {
+  height: 35px;
+  border-radius: 6px;
+  border: 1px solid lightgrey;
+  padding: 0 10px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #4caf50;
+  box-shadow: 0 0 5px #4caf50;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  margin: 0;
+}
+
+button {
+  height: 35px;
+  border-radius: 6px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+label {
+  display: inline-block;
+  font-size: 14px;
+  padding-bottom: 8px;
+  color: grey;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.close_modal_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  color: grey;
+  background-color: transparent;
+}
+
+.common_modal {
+  position: relative;
+  height: max-content;
+  background-color: white;
+  padding: 50px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  gap: 30px;
+  min-width: 400px;
+}
+
+.buy_lotto_modal {
+  margin-right: 30px;
+}
+
+.winning_number_input {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.buy_lotto_input_wrap {
+  /* margin-top: 5px; */
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 10px;
+}
+
+.lotto_list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.lotto_list ul li {
+  list-style: none;
+  background-color: #f0f0f0ff;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.winning_number_form {
+  margin-bottom: 10px;
+}
+
+.winning_number_wrap {
+  display: flex;
+  gap: 50px;
+}
+
+.winning_number_wrap div:last-child div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table tr th,
+td {
+  padding: 10px 0;
+}
+
+table th {
+  border-top: 1px solid lightgrey;
+}
+
+table td {
+  border-top: 1px solid lightgrey;
+}
+
+table tr:last-child td {
+  border-bottom: 1px solid lightgrey;
+}

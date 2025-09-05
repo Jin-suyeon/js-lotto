@@ -3,13 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <title>🎱 행운의 로또</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
 
   <body>
     <div id="app">
-      <h1>🎱 행운의 로또</h1>
+      <div class="common_modal buy_lotto_modal">
+        <h1>내 번호 당첨 확인</h1>
+
+        <form id="buy_lotto_form">
+          <label>구입할 금액을 입력해주세요.</label>
+          <div class="buy_lotto_input_wrap">
+            <input
+              id="buyLotto"
+              type="number"
+              min="1000"
+              step="1000"
+              placeholder="금액"
+            />
+            <button>구입</button>
+          </div>
+        </form>
+
+        <div class="lotto_list">
+          <label>총 7개를 구매하였습니다.</label>
+          <ul>
+            <li>1, 2, 3, 4, 5, 6</li>
+            <li>1, 2, 3, 4, 5, 6</li>
+            <li>1, 2, 3, 4, 5, 6</li>
+            <li>1, 2, 3, 4, 5, 6</li>
+            <li>1, 2, 3, 4, 5, 6</li>
+            <li>1, 2, 3, 4, 5, 6</li>
+            <li>1, 2, 3, 4, 5, 6</li>
+          </ul>
+        </div>
+
+        <form class="winning_number_form">
+          <label>지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</label>
+          <div class="winning_number_wrap">
+            <div>
+              <label>당첨 번호</label>
+              <div>
+                <input
+                  class="winning_number_input"
+                  type="number"
+                  min="1"
+                  max="45"
+                />
+                <input
+                  class="winning_number_input"
+                  type="number"
+                  min="1"
+                  max="45"
+                />
+                <input
+                  class="winning_number_input"
+                  type="number"
+                  min="1"
+                  max="45"
+                />
+                <input
+                  class="winning_number_input"
+                  type="number"
+                  min="1"
+                  max="45"
+                />
+                <input
+                  class="winning_number_input"
+                  type="number"
+                  min="1"
+                  max="45"
+                />
+                <input
+                  class="winning_number_input"
+                  type="number"
+                  min="1"
+                  max="45"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label>보너스 번호</label>
+              <div>
+                <input
+                  class="winning_number_input"
+                  type="number"
+                  min="1"
+                  max="45"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <button>결과 확인하기</button>
+      </div>
+
+      <div class="common_modal">
+        <button class="close_modal_btn">X</button>
+        <h1>당첨 통계</h1>
+
+        <table>
+          <thead>
+            <tr>
+              <th>일치 갯수</th>
+              <th>당첨금</th>
+              <th>당첨 갯수</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>3개</td>
+              <td>5,000</td>
+              <td>n개</td>
+            </tr>
+            <tr>
+              <td>4개</td>
+              <td>50,000</td>
+              <td>n개</td>
+            </tr>
+            <tr>
+              <td>5개</td>
+              <td>1,500,000</td>
+              <td>n개</td>
+            </tr>
+            <tr>
+              <td>5개+보너스볼</td>
+              <td>30,000,000</td>
+              <td>n개</td>
+            </tr>
+            <tr>
+              <td>6개</td>
+              <td>2,000,000,000</td>
+              <td>n개</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>당신의 총 수익률은 %입니다.</h2>
+
+        <button>다시 시작하기</button>
+      </div>
     </div>
     <script type="module" src="./src/step2-index.js"></script>
   </body>
